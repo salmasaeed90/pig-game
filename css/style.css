@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to top left, #901194 0%, #901343 100%);
+  height: 100vh;
+  font-family: cursive;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100rem;
+  height: 90vh;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 30px;
+  overflow: hidden;
+}
+main {
+  position: relative;
+}
+.player {
+  flex: 50%;
+  width: 50rem;
+  text-align: center;
+  padding: 50px;
+  font-size: 30px;
+}
+.player h2,
+.score {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.score {
+  margin-bottom: 50px;
+  color: #901343;
+}
+.current {
+  background-color: #901343;
+  opacity: 0.8;
+  width: 40%;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.btn--roll,
+.btn--new,
+.btn--hold {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  backdrop-filter: blure(20%);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.btn--roll:hover,
+.btn--new:hover,
+.btn--hold:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.btn--new {
+  top: 10%;
+}
+.dice {
+  position: absolute;
+  left: 46%;
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  backdrop-filter: blure(20%);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+img {
+  width: 100%;
+}
+.btn--roll {
+  top: 65%;
+}
+.btn--hold {
+  /* left: 47%; */
+  text-align: center;
+  top: 85%;
+}
+.btn--roll i,
+.btn--new i,
+.btn--hold i {
+  color: #901343;
+}
+.btn:active {
+  transform: translate(-50%, 3px);
+}
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 700;
+}
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+.hidden {
+  display: none;
+}
+/* <main>
+<div class="container">
+  <section class="player player--0 player--active">
+    <h2 class="name" id="name--0">player1</h2>
+    <p class="score" id="score--0">55</p>
+    <div class="current">
+      <p class="current-label">Current</p>
+      <p class="current-score" id="current--0">0</p>
+    </div>
+  </section>
+  <section class="player player--1">
+    <h2 class="name" id="name--1">player2</h2>
+    <p class="score" id="score--1">44</p>
+    <div class="current">
+      <p class="current-label">Current</p>
+      <p class="current-score" id="current--1">0</p>
+    </div>
+  </section>
+</div>
+<img src="  dice-1.png" alt="playing dice" class="dice" />
+<buuton class="btn btn--new">New Game</buuton>
+<button class="btn btn--roll">Roll Dice</button>
+<button class="btn btn--hold">Hold</button>
+</main> */
